@@ -1,0 +1,232 @@
+.injection body {
+  overscroll-behavior: none;
+  overflow: hidden;
+  --color-one: black;
+  --color-two: black;
+  --bg-size: 400%;
+  --title-gradient: linear-gradient(
+                90deg,
+                var(--color-one),
+                var(--color-two),
+                var(--color-one)
+              ) 0 0 / var(--bg-size) 100%;
+
+  --title-gradient-vert: linear-gradient(
+                0deg,
+                var(--color-one),
+                var(--color-two),
+                var(--color-one)
+              ) 0 0 / var(--bg-size) 100%;
+
+  background-color: white;
+}
+
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
+  }
+}
+
+.injection .boost-infinite {
+  background: var(--title-gradient);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 600;
+  animation: move-bg 30s infinite linear;
+}
+
+.injection .mw-body  {
+  margin-left: 0 !important;
+  flex: 1;
+  border: 0 !important;
+
+  padding-left: 0px !important;
+  padding-top: 10px !important;
+}
+
+.injection #p-search {
+  margin-top: unset !important;
+  margin-left: auto;
+}
+
+.injection #right-navigation form {
+  margin: unset !important;
+}
+
+.injection .navbox {
+  overflow: scroll;
+}
+
+.injection #boost-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.injection #boost-subcontainer {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 60px);
+
+  overflow-y: clip;
+  overflow-x: scroll;
+
+  background-color: var(--arc-palette-background);
+}
+
+.injection .scroll-container {
+  overflow-y: scroll;
+    overflow-x: clip;
+}
+
+.injection .page_parent {
+  display: flex;
+  flex-direction: row;
+
+  box-shadow: 0px 0px 15px 3px rgb(0 0 0 / 10%);  
+  border: 1px solid #a7d7f9;
+  border-top: 0px;
+
+  flex: 0 0 44em;
+  max-width: 44em;
+  width: 44em;
+}
+
+.injection #content {
+  background-color: transparent !important;
+}
+
+.injection #boost-header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 8px;
+  padding-left: 48px;
+  height: calc(72px - 16px);
+  max-height: 72px;
+  overflow: hidden;
+
+  border-bottom: 1px solid #a2a9b1;
+  margin-bottom: 1px;
+
+  z-index: 100;
+  box-shadow: 0px 5px 10px 3px rgb(0 0 0 / 3%);
+
+  background-color: var(--arc-palette-backgroundExtra);
+}
+
+.injection #boost-headertext {
+  text-decoration: none !important;
+  border-bottom: 0px;
+  margin-bottom: 0px !important;
+  color: var(--title-color) !important;
+}
+
+.injection #boost-subcontainer > .page_parent:first-of-type {
+  border-left: 0px;
+}
+
+.injection .name-strip-parent {
+  min-width: 48px;
+}
+
+.injection .name_strip {
+  text-orientation:sideways;
+  writing-mode: vertical-lr;
+  display: flex;
+  flex-direction: row;
+  padding: 12px;
+  
+  min-width: 23px;
+  height: calc(100vh - 72px - 53px);
+  z-index: 10;
+
+  background-color: var(--arc-palette-backgroundExtra);
+}
+
+.injection .boost-tabs-hover-left {
+  position: absolute;
+  left: 0px;
+}
+
+.injection .boost-tabs-hover-right {
+  position: absolute;
+  right: 0px;
+}
+
+.injection .boost-nameelement {
+  cursor: pointer;
+  display: flex;
+}
+
+.injection .boost-nameelement > h3 {
+  color: var(--title-color) !important;
+}
+
+.injection .boost-closebutton {
+  transform: rotate(90deg);
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.injection .boost-closebutton:hover {
+  background-color: var(--arc-palette-hover);
+}
+
+.injection .boost-active-nameelement h3 {
+  text-decoration: none;
+  position: relative;
+}
+
+.injection .boost-active-nameelement h3::before {
+  content: "";
+  position: absolute;
+  top: 0.3em;
+  bottom: -0.3em;  
+  left: 0;
+  z-index: 10000;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--title-gradient-vert);
+}
+
+.injection .boost-active-nameelement h3:hover::before {
+    background: var(--arc-palette-hover);
+}
+
+
+
+.injection .page_parent {
+  display: flex;
+  flex-direction: row;
+
+  background-color: var(--arc-palette-backgroundExtra);
+}
+
+.injection .mw-indicators {
+  display: flex; 
+  gap: 5px 
+}
+.injection .boost-copyindicator:hover {
+  color: var(--arc-palette-foregroundSecondary);
+}
+
+.injection .boost-copyindicator {
+  width: 20px;  
+  height: 20px;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.injection a {
+  color: var(--arc-palette-focus) !important;
+}
+
+.injection a:hover {
+  color: var(--arc-palette-hover) !important;
+}
+
